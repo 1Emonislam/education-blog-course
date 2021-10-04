@@ -28,9 +28,9 @@ function App() {
           <Route path="/services">
             <ServicesCourse></ServicesCourse>
           </Route>
-          <Route path="/course/:courseId">
+          {/* <Route path="/course/:courseId">
             <CourseDetails></CourseDetails>
-          </Route>
+          </Route> */}
           <Route path="/teachers">
             <Teacher></Teacher>
           </Route>
