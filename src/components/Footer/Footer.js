@@ -13,7 +13,7 @@ const Footer = () => {
                             <div className="col-lg-4 col-md-6">
                                 <div className="footer-about mt-40">
                                     <div className="logo">
-                                        <i class="fas fa-university"></i>
+                                        <i className="fas fa-university"></i>
                                     </div>
                                     <p>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, morals, beliefs, and habits. Educational methods include.</p>
                                     <div className="mt-20 d-flex " id="footer-social">
