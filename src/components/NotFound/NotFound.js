@@ -3,7 +3,7 @@ import React from 'react';
 const NotFound = () => {
     return (
         <div className="container">
-            <h2>Page Not Found 404</h2>
+            <img className="d-block m-auto" src="https://colorlib.com/wp/wp-content/uploads/sites/2/404-error-template-3.png" alt="" />
         </div>
     );
 };
