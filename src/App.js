@@ -28,9 +28,6 @@ function App() {
           <Route path="/services">
             <ServicesCourse></ServicesCourse>
           </Route>
-          {/* <Route path="/course/:courseId">
-            <CourseDetails></CourseDetails>
-          </Route> */}
           <Route path="/teachers">
             <Teacher></Teacher>
           </Route>
