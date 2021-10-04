@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+	nav ul li {
+		padding: 7px 2px;
+		display: block;
+		border-bottom: 1px solid #ddd;
+	}
+}
+@media (min-width: 768px) {
+	.nav-menu {
+		display: flex;
+		align-items: center;
+		margin-top: 15px;
+	}
+	nav ul li {
+		margin-right: 20px;
+	}
+}
+
+.search-area {
+	position: relative;
+}
+.search-icon {
+	border: none;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	background: transparent;
+	font-size: 20px;
+	color: #686765;
+}
