@@ -1,9 +1,14 @@
 import React from 'react';
+import { Container, Row } from 'react-bootstrap';
+import useCourses from '../../hooks/useCourses';
 import Applay from '../Applay/Applay';
 import Catagories from '../Catagories/Catagories';
+import HomeCourse from '../HomeCourse/HomeCourse';
 import Slider from '../Slider/Slider';
 
 const Home = () => {
+    const [courses] = useCourses();
+
     return (
         <div>
             <Slider></Slider>
@@ -63,6 +68,18 @@ const Home = () => {
             </section>
             {/*====== ABOUT PART ENDS ======*/}
             <Applay></Applay>
+
+            {/*====== Popular Courses ======*/}
+
+            <Container>
+                <h2 className="text-center"> Popular Courses</h2>
+                <Row xs={1} md={2} lg={4} xxl={4} className="g-4">
+
+                    {
+                        courses.slice(0, 4).map(course => <HomeCourse key={course.id} course={course}></HomeCourse>)
+                    }
+                </Row>
+            </Container>
         </div>
     );
 };

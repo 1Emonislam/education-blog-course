@@ -20,7 +20,7 @@ const Header = () => {
                                 <ul className="nav-menu">
                                     <li> <NavLink to="/home"> Home </NavLink></li>
                                     <li> <NavLink to="/About">About </NavLink></li>
-                                    <li> <NavLink to="/services/Course"> Services </NavLink></li>
+                                    <li> <NavLink to="/services"> Services/course </NavLink></li>
                                     <li> <NavLink to="/teachers"> Teachers </NavLink></li>
                                     <li> <NavLink to="/testimonial"> Testimonial </NavLink></li>
                                 </ul>
