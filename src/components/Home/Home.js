@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { useParams } from 'react-router';
 import useCourses from '../../hooks/useCourses';
 import Applay from '../Applay/Applay';
 import Catagories from '../Catagories/Catagories';
@@ -8,7 +9,6 @@ import Slider from '../Slider/Slider';
 
 const Home = () => {
     const [courses] = useCourses();
-
     return (
         <div>
             <Slider></Slider>
@@ -79,6 +79,9 @@ const Home = () => {
                         courses.slice(0, 4).map(course => <HomeCourse key={course.id} course={course}></HomeCourse>)
                     }
                 </Row>
+                {
+
+                }
             </Container>
         </div>
     );

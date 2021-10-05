@@ -1,19 +1,19 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 
 const HomeCourse = (props) => {
-    const { img, author, title, price } = props.course;
+    const { id, img, author, title, price } = props.course;
     return (
         <div>
             <Card style={{ width: '18rem', margin: '20px -20px' }}>
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
-                    <Card.Title>{title.slice(0, 40)}...</Card.Title>
-                    <strong>Price: ${price}</strong>
+                    <Card.Title><Link to={`/course/${id}`}> <h5 className="title-course">{title.slice(0, 40)}...</h5> </Link></Card.Title>
+                    <strong className="">Price: ${price}</strong>
                     <Card.Text>
-                        {author}
+                        <NavLink to="#"> {author}</NavLink>
                     </Card.Text>
-                    {/* <Button variant="primary">Go somewhere</Button> */}
                 </Card.Body>
             </Card>
         </div >
