@@ -6,7 +6,6 @@ import SingleCourse from '../SingleCourse/SingleCourse';
 
 const ServicesCourse = () => {
     const [courses] = useCourses();
-
     return (
         <div>
 

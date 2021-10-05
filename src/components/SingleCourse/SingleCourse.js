@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 const SingleCourse = (props) => {
     const { course } = props;
-    const { img, author, title, price } = course;
+    const { id, img, author, title, price } = course;
     // console.log(course)
     return (
         <div>
@@ -16,7 +16,7 @@ const SingleCourse = (props) => {
                     </div>
                 </div>
                 <div className="cont">
-                    <Link to=""><h4>{title}</h4></Link>
+                    <NavLink to={`/course/${id}`}><h4>{title}</h4></NavLink>
                     <div className="course-teacher">
                         <div className="thum">
                             <strong>{author}</strong>
