@@ -12,7 +12,6 @@
 -   Services
 -   Testimonal
 -   Teachers
-
 ## Homepage using addmission applay and popular course added
 
 ## AboutPage using platform abouted and students counted
