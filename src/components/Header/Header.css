@@ -11,11 +11,17 @@
 		align-items: center;
 		margin-top: 15px;
 	}
+	.lg-pb-5 {
+		padding-bottom: 60px;
+	}
 	nav ul li {
 		margin-right: 20px;
 	}
 	nav {
 		padding: 30px 0 !important;
+	}
+	.card {
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 	}
 }
 

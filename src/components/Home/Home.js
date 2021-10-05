@@ -70,7 +70,7 @@ const Home = () => {
             {/*====== Popular Courses ======*/}
 
             <Container>
-                <h2 className="text-center"> Popular Courses</h2>
+                <h3 className="text-center pb-3"> Popular Courses</h3>
                 <Row xs={1} md={2} lg={4} xxl={4} className="g-4">
 
                     {

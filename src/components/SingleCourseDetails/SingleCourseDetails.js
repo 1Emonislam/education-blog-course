@@ -56,7 +56,7 @@ const SingleCourseDetails = (props) => {
                                             <div className="tab-content" id="myTabContent">
                                                 <div className="tab-pane fade show active" id="courses-grid" role="tabpanel" aria-labelledby="courses-grid-tab">
                                                     <br />
-                                                    <h3 className="text-primary">Popular Courses</h3>
+                                                    <h4 className="text-primary ps-4 py-3">Popular Courses</h4>
 
                                                     <Row xs={1} md={2} className="g-4">
 
