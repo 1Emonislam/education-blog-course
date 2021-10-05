@@ -1,4 +1,5 @@
 
+import { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useCourses from '../../hooks/useCourses';
@@ -6,6 +7,20 @@ import SingleCourse from '../SingleCourse/SingleCourse';
 
 const ServicesCourse = () => {
     const [courses] = useCourses();
+    const [searchDisplay, setSearchDisplay] = useState([]);
+    const [searchText, setSearchText] = useState('');
+    useEffect(() => {
+        if (courses.length) {
+            const searchFilter = courses.filter(course => course.title.toLowerCase().includes(searchText.toLowerCase()));
+            setSearchDisplay(courses);
+            setSearchDisplay(searchFilter)
+        }
+    }, [courses, searchText])
+
+    const handleSearch = event => {
+        const searchTextValue = event.target.value;
+        setSearchText(searchTextValue);
+    }
     return (
         <div>
 
@@ -26,7 +41,7 @@ const ServicesCourse = () => {
                                 </ul> {/* nav */}
                                 <div className="courses-search float-right">
                                     <form action="#">
-                                        <input type="text" placeholder="Search" />
+                                        <input onChange={handleSearch} type="text" placeholder="Search" />
                                         <button type="button"><i className="fa fa-search" /></button>
                                     </form>
                                 </div> {/* courses search */}
@@ -37,7 +52,7 @@ const ServicesCourse = () => {
                         <div className="tab-pane fade show active" id="courses-grid" role="tabpanel" aria-labelledby="courses-grid-tab">
                             <Row xs={1} md={2} lg={3} xxl={4} className="g-4">
                                 {
-                                    courses.map(course => <SingleCourse key={course.id} course={course}></SingleCourse>)
+                                    searchDisplay.map(course => <SingleCourse key={course.id} course={course}></SingleCourse>)
                                 }
                             </Row>
                         </div>

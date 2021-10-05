@@ -16,10 +16,10 @@ const SingleCourse = (props) => {
                     </div>
                 </div>
                 <div className="cont">
-                    <NavLink to={`/course/${id}`}><h4>{title}</h4></NavLink>
+                    <NavLink to={`/course/${id}`}><h4>{title.slice(0, 35)}..</h4></NavLink>
                     <div className="course-teacher">
                         <div className="thum">
-                            <strong>{author}</strong>
+                            <strong>Author: </strong>
                         </div>
                         <div className="name">
                             <Link to="#"><h6>{author}</h6></Link>
