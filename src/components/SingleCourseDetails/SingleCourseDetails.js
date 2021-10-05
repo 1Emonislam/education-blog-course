@@ -1,8 +1,17 @@
 import React from 'react';
+import { Row } from 'react-bootstrap';
+import useCourses from '../../hooks/useCourses';
+import HomeCourse from '../HomeCourse/HomeCourse';
 
 const SingleCourseDetails = (props) => {
+    const [courses] = useCourses();
     const { singleCourseDetails } = props;
     const { img, author, title, body } = singleCourseDetails;
+    let store_course = [];
+    if (courses.length) {
+        // eslint-disable-next-line no-unused-vars
+        store_course = (courses.slice(0, 4))
+    }
     return (
         <div>
             {/*====== COURSES SINGEl PART START ======*/}
@@ -43,6 +52,21 @@ const SingleCourseDetails = (props) => {
                                                     <p>{body}</p>
                                                 </div>
                                             </div> {/* overview description */}
+
+                                            <div className="tab-content" id="myTabContent">
+                                                <div className="tab-pane fade show active" id="courses-grid" role="tabpanel" aria-labelledby="courses-grid-tab">
+                                                    <br />
+                                                    <h3 className="text-primary">Popular Courses</h3>
+
+                                                    <Row xs={1} md={2} className="g-4">
+
+                                                        {
+                                                            store_course.map(course => <HomeCourse key={course.id} course={course}></HomeCourse>)
+                                                        }
+                                                    </Row>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div> {/* tab content */}
                                 </div>
@@ -51,9 +75,6 @@ const SingleCourseDetails = (props) => {
                     </div>
                 </div>
             </section>
-
-
-
         </div>
     );
 };

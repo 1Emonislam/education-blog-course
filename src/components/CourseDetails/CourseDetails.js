@@ -11,7 +11,7 @@ const CourseDetails = () => {
         const currentFind = courses.find(course => course.id === courseId);
         storeCourse.push(currentFind)
     }
-    console.log(storeCourse)
+    // console.log(storeCourse)
     return (
         <div>
             {
