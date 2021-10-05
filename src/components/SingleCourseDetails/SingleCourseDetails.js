@@ -1,6 +1,4 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import HomeCourse from '../HomeCourse/HomeCourse';
 
 const SingleCourseDetails = (props) => {
     const { singleCourseDetails } = props;
