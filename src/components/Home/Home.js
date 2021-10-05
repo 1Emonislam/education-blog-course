@@ -1,12 +1,10 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router';
 import useCourses from '../../hooks/useCourses';
 import Applay from '../Applay/Applay';
 import Catagories from '../Catagories/Catagories';
 import HomeCourse from '../HomeCourse/HomeCourse';
 import Slider from '../Slider/Slider';
-
 const Home = () => {
     const [courses] = useCourses();
     return (
